@@ -138,8 +138,8 @@
     font-size:17px; color:var(--ink-soft); max-width:520px;
     margin:18px auto 0;
   }
-  .cta-row{margin-top:38px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
   .cta{
+    margin-top:38px;
     display:inline-flex; align-items:center; gap:10px;
     padding:13px 28px;
     border:1.5px solid var(--ink);
@@ -152,8 +152,6 @@
   .cta:hover{background:var(--ink); color:var(--paper); transform:translateY(-2px);}
   .cta svg{transition:transform 0.3s ease;}
   .cta:hover svg{transform:translateY(3px);}
-  .cta-alt{background:var(--ink); color:var(--paper);}
-  .cta-alt:hover{background:var(--clay); border-color:var(--clay); color:var(--paper);}
 
   .compass{
     margin-top:56px;
@@ -206,6 +204,38 @@
     font-size:17.5px; color:var(--ink); max-width:56ch;
   }
   .entry .card p + p{margin-top:14px;}
+
+  /* ============ VIEWPOINT ============ */
+  .vp{
+    max-width:680px;
+    background:var(--paper-deep);
+    border:1px solid var(--line);
+    padding:clamp(28px,4vw,46px);
+    box-shadow:6px 6px 0 var(--line-soft);
+  }
+  .vp-tag{
+    display:inline-block;
+    font-family:var(--mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase;
+    color:var(--brass);
+    border:1px solid var(--brass);
+    padding:3px 10px;
+    margin-bottom:18px;
+  }
+  .vp p.vp-text{font-size:17.5px; color:var(--ink); max-width:52ch;}
+  .vp-tabs{
+    display:flex; flex-wrap:wrap; gap:10px;
+    margin:26px 0 30px;
+  }
+  .vp-tabs li{
+    font-family:var(--mono); font-size:12.5px; letter-spacing:0.05em;
+    color:var(--ink-soft);
+    padding:7px 14px;
+    background:var(--paper);
+    border:1px solid var(--line);
+  }
+  .vp .cta{margin-top:0;}
+  .vp .cta svg{transition:transform 0.3s ease;}
+  .vp .cta:hover svg{transform:translate(2px,-2px);}
 
   /* ============ CONTACT (postcard) ============ */
   .postcard{
@@ -291,14 +321,14 @@
     }
     .hero-eyebrow{font-size:11px; margin-bottom:16px;}
     .hero .desc{font-size:15.5px;}
-    .cta-row{margin-top:30px;}
-    .cta{padding:12px 24px;}
+    .cta{margin-top:30px; padding:12px 24px;}
     .compass{margin-top:40px; width:44px; height:44px;}
 
     .wrap{padding:64px 20px;}
     .wrap h2{margin-bottom:26px;}
     .entry .card{padding:28px 22px;}
     .postcard{padding:28px 22px;}
+    .vp{padding:28px 22px;}
     .socials{gap:12px;}
   }
 
@@ -323,7 +353,7 @@
     <ul id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="https://ssaaffwwaann.github.io/viewpoint/" target="_blank" rel="noopener">Viewpoint</a></li>
+      <li><a href="#viewpoint">Viewpoint</a></li>
       <li><a href="https://www.instagram.com/Saf1wn/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.youtube.com/channel/UCsrTALAjWbpIbjhjauODCjg" target="_blank" rel="noopener">YouTube</a></li>
     </ul>
@@ -349,12 +379,9 @@
   <h1>Safwan</h1>
   <p class="subtitle">a personal survey, in progress</p>
   <p class="desc">A running log of what I'm learning about</p>
-  <div class="cta-row">
-    <a class="cta" href="#about">Begin the survey
-      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v11M2 8l5 5 5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </a>
-    <a class="cta cta-alt" href="https://ssaaffwwaann.github.io/viewpoint/" target="_blank" rel="noopener">Visit Viewpoint ↗</a>
-  </div>
+  <a class="cta" href="#about">Begin the survey
+    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v11M2 8l5 5 5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </a>
   <svg class="compass" viewBox="0 0 60 60" fill="none" aria-hidden="true">
     <circle cx="30" cy="30" r="26" stroke="var(--ink)" stroke-width="1"/>
     <circle cx="30" cy="30" r="19" stroke="var(--ink)" stroke-width="0.6" opacity="0.5"/>
@@ -379,6 +406,30 @@
   </div>
 </section>
 
+<!-- VIEWPOINT -->
+<section id="viewpoint">
+  <div class="wrap">
+    <p class="waypoint reveal">
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1c-3 0-5 2.2-5 5 0 3.5 5 7 5 7s5-3.5 5-7c0-2.8-2-5-5-5Z" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="6" r="1.6" fill="currentColor"/></svg>
+      N 02 — My project
+    </p>
+    <h2 class="reveal">Viewpoint</h2>
+    <div class="vp reveal">
+      <span class="vp-tag">Prototype</span>
+      <p class="vp-text">A small social media site I'm building around discussion and logical debates. Pick a topic, jump into a debate, and see what people are talking about.</p>
+      <ul class="vp-tabs" aria-label="What's inside Viewpoint">
+        <li>Home</li>
+        <li>Topics</li>
+        <li>Debates</li>
+        <li>Trending</li>
+      </ul>
+      <a class="cta" href="https://ssaaffwwaann.github.io/viewpoint/" target="_blank" rel="noopener">Open Viewpoint
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="wrap">
@@ -391,7 +442,6 @@
       <p class="lede">The fastest way to reach me is email — or find me where I post more often, below.</p>
       <a class="stamp" href="mailto:safwanislam18@gmail.com">safwanislam18@gmail.com</a>
       <div class="socials">
-        <a href="https://ssaaffwwaann.github.io/viewpoint/" target="_blank" rel="noopener">Viewpoint ↗</a>
         <a href="https://www.instagram.com/Saf1wn/" target="_blank" rel="noopener">Instagram ↗</a>
         <a href="https://www.youtube.com/channel/UCsrTALAjWbpIbjhjauODCjg" target="_blank" rel="noopener">YouTube ↗</a>
       </div>
