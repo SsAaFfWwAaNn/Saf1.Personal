@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="color-scheme" content="light">
-<meta name="theme-color" content="#EFE7D8">
-<title>Safwan — Field Notes</title>
-<meta name="description" content="Safwan Islam's personal site — a running log of learning to build the web.">
+<meta name="theme-color" content="#F8F1E2">
+<title>Safwan — Portfolio</title>
+<meta name="description" content="Safwan Islam's portfolio — a running log of what I'm learning about.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,15 +16,15 @@
   /* ============ TOKENS ============ */
   :root{
     color-scheme: light;
-    --paper: #EFE7D8;
-    --paper-deep: #E2D8C2;
-    --ink: #23241F;
-    --ink-soft: #5A5B50;
-    --navy: #2B3A4A;
-    --brass: #A9853E;
-    --clay: #A1462F;
-    --line: rgba(35,36,31,0.16);
-    --line-soft: rgba(35,36,31,0.09);
+    --paper: #F8F1E2;
+    --paper-deep: #F0E5CD;
+    --ink: #2F2A21;
+    --ink-soft: #6E6552;
+    --navy: #5A4E38;
+    --brass: #B08D45;
+    --clay: #A9553A;
+    --line: rgba(80,60,30,0.17);
+    --line-soft: rgba(80,60,30,0.09);
     --serif: 'Fraunces', Georgia, serif;
     --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --mono: 'JetBrains Mono', 'SFMono-Regular', Menlo, monospace;
@@ -44,7 +44,7 @@
   body{
     font-family:var(--sans);
     background-color:var(--paper);
-    background-image:radial-gradient(circle at 1px 1px, rgba(35,36,31,0.045) 1px, transparent 0);
+    background-image:radial-gradient(circle at 1px 1px, rgba(80,60,30,0.05) 1px, transparent 0);
     background-size:22px 22px;
     background-attachment:local;
     color:var(--ink);
@@ -138,8 +138,8 @@
     font-size:17px; color:var(--ink-soft); max-width:520px;
     margin:18px auto 0;
   }
+  .cta-row{margin-top:38px; display:flex; gap:14px; flex-wrap:wrap; justify-content:center;}
   .cta{
-    margin-top:38px;
     display:inline-flex; align-items:center; gap:10px;
     padding:13px 28px;
     border:1.5px solid var(--ink);
@@ -152,6 +152,8 @@
   .cta:hover{background:var(--ink); color:var(--paper); transform:translateY(-2px);}
   .cta svg{transition:transform 0.3s ease;}
   .cta:hover svg{transform:translateY(3px);}
+  .cta-alt{background:var(--ink); color:var(--paper);}
+  .cta-alt:hover{background:var(--clay); border-color:var(--clay); color:var(--paper);}
 
   .compass{
     margin-top:56px;
@@ -276,7 +278,7 @@
       background:var(--paper);
       border:1px solid var(--line);
       padding:22px;
-      box-shadow:0 10px 24px rgba(35,36,31,0.12);
+      box-shadow:0 10px 24px rgba(80,60,30,0.14);
       z-index:60;
     }
     nav ul.active{display:flex;}
@@ -289,7 +291,8 @@
     }
     .hero-eyebrow{font-size:11px; margin-bottom:16px;}
     .hero .desc{font-size:15.5px;}
-    .cta{margin-top:30px; padding:12px 24px;}
+    .cta-row{margin-top:30px;}
+    .cta{padding:12px 24px;}
     .compass{margin-top:40px; width:44px; height:44px;}
 
     .wrap{padding:64px 20px;}
@@ -320,6 +323,7 @@
     <ul id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><a href="https://ssaaffwwaann.github.io/viewpoint/" target="_blank" rel="noopener">Viewpoint</a></li>
       <li><a href="https://www.instagram.com/Saf1wn/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.youtube.com/channel/UCsrTALAjWbpIbjhjauODCjg" target="_blank" rel="noopener">YouTube</a></li>
     </ul>
@@ -342,13 +346,15 @@
       </g>
     </svg>
   </div>
-  <p class="hero-eyebrow">Field notes · Est. 2026</p>
   <h1>Safwan</h1>
   <p class="subtitle">a personal survey, in progress</p>
-  <p class="desc">A running log of what I'm learning about building things for the web.</p>
-  <a class="cta" href="#about">Begin the survey
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v11M2 8l5 5 5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-  </a>
+  <p class="desc">A running log of what I'm learning about</p>
+  <div class="cta-row">
+    <a class="cta" href="#about">Begin the survey
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M7 1v11M2 8l5 5 5-5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+    <a class="cta cta-alt" href="https://ssaaffwwaann.github.io/viewpoint/" target="_blank" rel="noopener">Visit Viewpoint ↗</a>
+  </div>
   <svg class="compass" viewBox="0 0 60 60" fill="none" aria-hidden="true">
     <circle cx="30" cy="30" r="26" stroke="var(--ink)" stroke-width="1"/>
     <circle cx="30" cy="30" r="19" stroke="var(--ink)" stroke-width="0.6" opacity="0.5"/>
@@ -385,6 +391,7 @@
       <p class="lede">The fastest way to reach me is email — or find me where I post more often, below.</p>
       <a class="stamp" href="mailto:safwanislam18@gmail.com">safwanislam18@gmail.com</a>
       <div class="socials">
+        <a href="https://ssaaffwwaann.github.io/viewpoint/" target="_blank" rel="noopener">Viewpoint ↗</a>
         <a href="https://www.instagram.com/Saf1wn/" target="_blank" rel="noopener">Instagram ↗</a>
         <a href="https://www.youtube.com/channel/UCsrTALAjWbpIbjhjauODCjg" target="_blank" rel="noopener">YouTube ↗</a>
       </div>
