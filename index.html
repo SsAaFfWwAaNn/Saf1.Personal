@@ -226,13 +226,17 @@
     display:flex; flex-wrap:wrap; gap:10px;
     margin:26px 0 30px;
   }
-  .vp-tabs li{
+  .vp-tabs a{
+    display:block;
     font-family:var(--mono); font-size:12.5px; letter-spacing:0.05em;
     color:var(--ink-soft);
     padding:7px 14px;
     background:var(--paper);
     border:1px solid var(--line);
+    transition:color 0.25s ease, border-color 0.25s ease, transform 0.2s ease;
   }
+  .vp-tabs a:hover{color:var(--clay); border-color:var(--clay); transform:translateY(-2px);}
+  .vp-tabs a:focus-visible{outline:2px solid var(--clay); outline-offset:3px;}
   .vp .cta{margin-top:0;}
   .vp .cta svg{transition:transform 0.3s ease;}
   .vp .cta:hover svg{transform:translate(2px,-2px);}
@@ -418,10 +422,10 @@
       <span class="vp-tag">Prototype</span>
       <p class="vp-text">A small social media site I'm building around discussion and logical debates. Pick a topic, jump into a debate, and see what people are talking about.</p>
       <ul class="vp-tabs" aria-label="What's inside Viewpoint">
-        <li>Home</li>
-        <li>Topics</li>
-        <li>Debates</li>
-        <li>Trending</li>
+        <li><a href="https://ssaaffwwaann.github.io/viewpoint/#home" target="_blank" rel="noopener">Home</a></li>
+        <li><a href="https://ssaaffwwaann.github.io/viewpoint/#topics" target="_blank" rel="noopener">Topics</a></li>
+        <li><a href="https://ssaaffwwaann.github.io/viewpoint/#debates" target="_blank" rel="noopener">Debates</a></li>
+        <li><a href="https://ssaaffwwaann.github.io/viewpoint/#trending" target="_blank" rel="noopener">Trending</a></li>
       </ul>
       <a class="cta" href="https://ssaaffwwaann.github.io/viewpoint/" target="_blank" rel="noopener">Open Viewpoint
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
