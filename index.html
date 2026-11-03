@@ -237,6 +237,10 @@
   }
   .vp-tabs a:hover{color:var(--clay); border-color:var(--clay); transform:translateY(-2px);}
   .vp-tabs a:focus-visible{outline:2px solid var(--clay); outline-offset:3px;}
+  .vp + .vp{margin-top:32px;}
+  .vp-title{font-size:clamp(22px,3vw,28px); margin:0 0 14px; line-height:1.2;}
+  .vp-tags{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:18px;}
+  .vp-tags .vp-tag{margin-bottom:0;}
   .vp .cta{margin-top:0;}
   .vp .cta svg{transition:transform 0.3s ease;}
   .vp .cta:hover svg{transform:translate(2px,-2px);}
@@ -357,7 +361,7 @@
     <ul id="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#viewpoint">Viewpoint</a></li>
+      <li><a href="#viewpoint">Projects</a></li>
       <li><a href="https://www.instagram.com/Saf1wn/" target="_blank" rel="noopener">Instagram</a></li>
       <li><a href="https://www.youtube.com/channel/UCsrTALAjWbpIbjhjauODCjg" target="_blank" rel="noopener">YouTube</a></li>
     </ul>
@@ -415,11 +419,12 @@
   <div class="wrap">
     <p class="waypoint reveal">
       <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 1c-3 0-5 2.2-5 5 0 3.5 5 7 5 7s5-3.5 5-7c0-2.8-2-5-5-5Z" stroke="currentColor" stroke-width="1.2"/><circle cx="7" cy="6" r="1.6" fill="currentColor"/></svg>
-      N 02 — My project
+      N 02 — My projects
     </p>
-    <h2 class="reveal">Viewpoint</h2>
+    <h2 class="reveal">Projects</h2>
     <div class="vp reveal">
       <span class="vp-tag">Prototype</span>
+      <h3 class="vp-title">Viewpoint</h3>
       <p class="vp-text">A small social media site I'm building around discussion and logical debates. Pick a topic, jump into a debate, and see what people are talking about.</p>
       <ul class="vp-tabs" aria-label="What's inside Viewpoint">
         <li><a href="https://ssaaffwwaann.github.io/viewpoint/#home" target="_blank" rel="noopener">Home</a></li>
@@ -428,6 +433,21 @@
         <li><a href="https://ssaaffwwaann.github.io/viewpoint/#trending" target="_blank" rel="noopener">Trending</a></li>
       </ul>
       <a class="cta" href="https://ssaaffwwaann.github.io/viewpoint/" target="_blank" rel="noopener">Open Viewpoint
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+    <div class="vp reveal">
+      <div class="vp-tags">
+        <span class="vp-tag">Game</span>
+        <span class="vp-tag">2D</span>
+      </div>
+      <h3 class="vp-title">Beyond the Border</h3>
+      <p class="vp-text">A 2D plane shooter game you can play right in the browser. Fly solo against AI enemies in PVE mode, or jump into Online Multiplayer and take on other players.</p>
+      <ul class="vp-tabs" aria-label="Game modes in Beyond the Border">
+        <li><a href="https://ssaaffwwaann.github.io/Beyond-the-Border/" target="_blank" rel="noopener">PVE</a></li>
+        <li><a href="https://ssaaffwwaann.github.io/Beyond-the-Border/" target="_blank" rel="noopener">Online Multiplayer</a></li>
+      </ul>
+      <a class="cta" href="https://ssaaffwwaann.github.io/Beyond-the-Border/" target="_blank" rel="noopener">Play Beyond the Border
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M3 11L11 3M5 3h6v6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
